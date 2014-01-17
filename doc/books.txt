@@ -1,0 +1,4 @@
+A Retargetable C Compiler Design and Implementation
+ANSI C http://flash-gordon.me.uk/ansi.c.txt
+C99 Standard http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf
+C11 Standard http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf
