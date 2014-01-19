@@ -62,7 +62,7 @@ module if_stage_tb();
 	initial begin
 		#0 begin
 			spm_rd_data 	<= `WORD_DATA_W'h0;
-			bus_rd_data 	<=  WORD_DATA_W'h0;
+			bus_rd_data 	<= `WORD_DATA_W'h0;
 			bus_rdy_ 	<= `DISABLE_;
 			bus_grnt_ 	<= `DISABLE_;
 
