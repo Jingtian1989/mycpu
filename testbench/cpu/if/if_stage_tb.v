@@ -61,41 +61,41 @@ module if_stage_tb();
 
 	initial begin
 		#0 begin
-			spm_rd_data 	<= 	`WORD_DATA_W'h0;
-			bus_rd_data 	<=  `WORD_DATA_W'h0;
-			bus_rdy_ 		<= 	`DISABLE_;
-			bus_grnt_ 		<=  `DISABLE_;
+			spm_rd_data 	<= `WORD_DATA_W'h0;
+			bus_rd_data 	<=  WORD_DATA_W'h0;
+			bus_rdy_ 	<= `DISABLE_;
+			bus_grnt_ 	<= `DISABLE_;
 
-			clk 			<= 	1'b0;
-			reset 			<=  `RESET_DISABLE;
-			stall 			<= 	`DISABLE;
-			flush 			<= 	`DISABLE;
+			clk 		<= 1'b0;
+			reset 		<= `RESET_DISABLE;
+			stall 		<= `DISABLE;
+			flush 		<= `DISABLE;
 
-			new_pc 			<=	`WORD_ADDR_W'h0;
-			br_taken 		<=	`DISABLE;
-			br_addr 		<=	`WORD_ADDR_W'h0;
+			new_pc 		<=`WORD_ADDR_W'h0;
+			br_taken 	<=`DISABLE;
+			br_addr 	<=`WORD_ADDR_W'h0;
 
 		end
 
 		#1 begin
-			reset 			<= `RESET_ENABLE;
+			reset 		<=`RESET_ENABLE;
 		end
 
 		#1 begin
-			reset 			<= `RESET_DISABLE;
-			spm_rd_data 	<= `WORD_DATA_W'h99;
-			bus_rd_data 	<= `WORD_DATA_W'h98;
-			new_pc 			<= `WORD_ADDR_W'h97;
-			br_taken 		<= `DISABLE;
-			br_addr 		<= `WORD_ADDR_W'h96;	
+			reset 		<=`RESET_DISABLE;
+			spm_rd_data 	<=`WORD_DATA_W'h99;
+			bus_rd_data 	<=`WORD_DATA_W'h98;
+			new_pc 		<=`WORD_ADDR_W'h97;
+			br_taken 	<=`DISABLE;
+			br_addr 	<=`WORD_ADDR_W'h96;	
 		end
 
 		#1 begin
-			bus_grnt_ 		<= `ENABLE_;
+			bus_grnt_ 	<=`ENABLE_;
 		end
 
 		#1 begin
-			bus_rdy_ 		<= `ENABLE_;
+			bus_rdy_ 	<=`ENABLE_;
 		end
 	end
 
